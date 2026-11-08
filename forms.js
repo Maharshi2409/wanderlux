@@ -15,7 +15,7 @@
    ========================================================== */
 "use strict";
 
-const AGENCY_EMAIL = "your-email@example.com";
+const AGENCY_EMAIL = "maharshipatel3038@gmail.com";
 const FORM_ENDPOINT = `https://formsubmit.co/ajax/${AGENCY_EMAIL}`;
 
 // Validation rules, keyed by input name
