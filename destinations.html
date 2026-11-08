@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations & Services | WanderLux Travel Agency</title>
+  <meta name="description" content="Browse WanderLux holiday packages, guided tours, flights and hotels, and honeymoon specials to Bali, Santorini, Japan, Paris, Queensland and New Zealand.">
+  <meta name="keywords" content="WanderLux, travel agency, holiday packages, guided tours, honeymoon, trip cost calculator, Melbourne">
+  <meta name="author" content="WanderLux Travel Agency">
+  <meta property="og:title" content="Destinations & Services | WanderLux Travel Agency">
+  <meta property="og:description" content="Browse WanderLux holiday packages, guided tours, flights and hotels, and honeymoon specials to Bali, Santorini, Japan, Paris, Queensland and New Zealand.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1f2a44">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="WanderLux Travel Agency – home">Wander<span>Lux</span></a>
+      <nav aria-label="Main navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span class="visually-hidden">Menu</span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html" aria-current="page">Destinations</a></li>
+          <li><a href="calculator.html">Trip Calculator</a></li>
+          <li><a href="appointment.html">Appointments</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <h1>Destinations &amp; Services</h1>
+        <p>Four ways to travel with WanderLux, and a hand-picked list of destinations our travellers love.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What we offer</span>
+          <h2 id="services-title">Our services</h2>
+        </div>
+        <article class="service">
+          <div class="service-media reveal reveal--left">
+            <img src="bali.svg" alt="Illustration representing holiday packages" loading="lazy" width="1200" height="700">
+          </div>
+          <div class="reveal reveal--right">
+            <span class="eyebrow">Service 01</span>
+            <h3>Holiday Packages</h3>
+            <p>All-inclusive breaks with flights, hotels and transfers bundled into one price.</p>
+            <ul><li>Beach, city and island escapes</li><li>Family-friendly and adults-only options</li><li>Flexible dates and payment plans</li></ul>
+            <a class="btn btn--primary" href="appointment.html">Enquire now</a>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-media reveal reveal--right">
+            <img src="japan.svg" alt="Illustration representing guided tours" loading="lazy" width="1200" height="700">
+          </div>
+          <div class="reveal reveal--left">
+            <span class="eyebrow">Service 02</span>
+            <h3>Guided Tours</h3>
+            <p>Small-group tours led by local, English-speaking guides who know every hidden corner.</p>
+            <ul><li>Groups of 8–16 travellers</li><li>Culture, food and nature itineraries</li><li>All entry fees and transport included</li></ul>
+            <a class="btn btn--primary" href="appointment.html">Enquire now</a>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-media reveal reveal--left">
+            <img src="paris.svg" alt="Illustration representing flights and hotels" loading="lazy" width="1200" height="700">
+          </div>
+          <div class="reveal reveal--right">
+            <span class="eyebrow">Service 03</span>
+            <h3>Flights &amp; Hotels</h3>
+            <p>Prefer to explore on your own? We find and book the best flights and stays for you.</p>
+            <ul><li>Economy to first-class fares</li><li>Hand-picked boutique and chain hotels</li><li>Price-match on comparable bookings</li></ul>
+            <a class="btn btn--primary" href="appointment.html">Enquire now</a>
+          </div>
+        </article>
+        <article class="service">
+          <div class="service-media reveal reveal--right">
+            <img src="santorini.svg" alt="Illustration representing honeymoon specials" loading="lazy" width="1200" height="700">
+          </div>
+          <div class="reveal reveal--left">
+            <span class="eyebrow">Service 04</span>
+            <h3>Honeymoon Specials</h3>
+            <p>Romantic getaways with private experiences and thoughtful extras.</p>
+            <ul><li>Suite upgrades where available</li><li>Private dinners and sunset cruises</li><li>Gift registry for wedding guests</li></ul>
+            <a class="btn btn--primary" href="appointment.html">Enquire now</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--sand" aria-labelledby="dest-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Where to next?</span>
+          <h2 id="dest-title">Featured destinations</h2>
+          <p>Filter by the type of trip you are planning.</p>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filter destinations">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" type="button" data-filter="holiday" aria-pressed="false">Holiday packages</button>
+          <button class="filter-btn" type="button" data-filter="tour" aria-pressed="false">Guided tours</button>
+          <button class="filter-btn" type="button" data-filter="flights" aria-pressed="false">Flights &amp; hotels</button>
+          <button class="filter-btn" type="button" data-filter="honeymoon" aria-pressed="false">Honeymoon</button>
+          <button class="filter-btn" type="button" data-filter="domestic" aria-pressed="false">Domestic</button>
+        </div>
+        <p id="filter-status" class="visually-hidden" aria-live="polite"></p>
+        <div class="grid grid--3">
+          <article class="card reveal delay-1" data-category="international holiday">
+            <img src="bali.svg" alt="Illustration of Bali, Indonesia" loading="lazy" width="1200" height="700">
+            <div class="card-body">
+              <span class="tag">Holiday package</span>
+              <h3>Bali, Indonesia</h3>
+              <p>Temples, terraces and beaches in 7 nights.</p>
+              <div class="card-meta"><span class="price">From $1,899 pp</span><a href="calculator.html">Estimate &rarr;</a></div>
+            </div>
+          </article>
+          <article class="card reveal delay-2" data-category="international honeymoon">
+            <img src="santorini.svg" alt="Illustration of Santorini, Greece" loading="lazy" width="1200" height="700">
+            <div class="card-body">
+              <span class="tag">Honeymoon</span>
+              <h3>Santorini, Greece</h3>
+              <p>Caldera suites and sunset cruises.</p>
+              <div class="card-meta"><span class="price">From $4,250 pp</span><a href="calculator.html">Estimate &rarr;</a></div>
+            </div>
+          </article>
+          <article class="card reveal delay-3" data-category="international tour">
+            <img src="japan.svg" alt="Illustration of Tokyo and Kyoto, Japan" loading="lazy" width="1200" height="700">
+            <div class="card-body">
+              <span class="tag">Guided tour</span>
+              <h3>Tokyo &amp; Kyoto, Japan</h3>
+              <p>Ten days of culture, food and gardens.</p>
+              <div class="card-meta"><span class="price">From $3,690 pp</span><a href="calculator.html">Estimate &rarr;</a></div>
+            </div>
+          </article>
+          <article class="card reveal delay-1" data-category="international flights">
+            <img src="paris.svg" alt="Illustration of Paris, France" loading="lazy" width="1200" height="700">
+            <div class="card-body">
+              <span class="tag">Flights &amp; hotel</span>
+              <h3>Paris, France</h3>
+              <p>Return flights plus 5 nights in Le Marais.</p>
+              <div class="card-meta"><span class="price">From $2,980 pp</span><a href="calculator.html">Estimate &rarr;</a></div>
+            </div>
+          </article>
+          <article class="card reveal delay-2" data-category="domestic holiday tour">
+            <img src="reef.svg" alt="Illustration of Great Barrier Reef, QLD" loading="lazy" width="1200" height="700">
+            <div class="card-body">
+              <span class="tag">Domestic</span>
+              <h3>Great Barrier Reef, QLD</h3>
+              <p>Snorkelling, islands and rainforest in 5 nights.</p>
+              <div class="card-meta"><span class="price">From $1,450 pp</span><a href="calculator.html">Estimate &rarr;</a></div>
+            </div>
+          </article>
+          <article class="card reveal delay-3" data-category="international tour holiday">
+            <img src="newzealand.svg" alt="Illustration of Queenstown, New Zealand" loading="lazy" width="1200" height="700">
+            <div class="card-body">
+              <span class="tag">Adventure tour</span>
+              <h3>Queenstown, New Zealand</h3>
+              <p>Lakes, alpine hikes and Milford Sound.</p>
+              <div class="card-meta"><span class="price">From $2,350 pp</span><a href="calculator.html">Estimate &rarr;</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>WanderLux Travel Agency</h2>
+        <p>Personalised holidays, guided tours and tailor-made travel packages for domestic and international journeys.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="destinations.html">Destinations &amp; Services</a></li>
+          <li><a href="calculator.html">Trip Cost Calculator</a></li>
+          <li><a href="appointment.html">Book an Appointment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visit us</h3>
+        <address>
+          Level 5, 120 Collins Street<br>Melbourne VIC 3000<br>
+          <a href="tel:+61391234567">(03) 9123 4567</a><br>
+          <a href="mailto:hello@wanderlux.com.au">hello@wanderlux.com.au</a>
+        </address>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> WanderLux Travel Agency. Student project for ICT502 – Internet and Web Development.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+  <script src="main.js" defer></script>
+</body>
+</html>

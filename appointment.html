@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment | WanderLux Travel Agency</title>
+  <meta name="description" content="Request a free travel planning appointment with a WanderLux consultant. Choose your preferred date and tell us about your dream trip.">
+  <meta name="keywords" content="WanderLux, travel agency, holiday packages, guided tours, honeymoon, trip cost calculator, Melbourne">
+  <meta name="author" content="WanderLux Travel Agency">
+  <meta property="og:title" content="Book an Appointment | WanderLux Travel Agency">
+  <meta property="og:description" content="Request a free travel planning appointment with a WanderLux consultant. Choose your preferred date and tell us about your dream trip.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1f2a44">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="WanderLux Travel Agency – home">Wander<span>Lux</span></a>
+      <nav aria-label="Main navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span class="visually-hidden">Menu</span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="calculator.html">Trip Calculator</a></li>
+          <li><a href="appointment.html" aria-current="page">Appointments</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <h1>Request an Appointment</h1>
+        <p>Book a free 45-minute planning session in our Melbourne office or by video call.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid--2" style="align-items:start">
+        <form id="appointment-form" class="form-card reveal reveal--left" data-email-form novalidate
+              data-success="Thanks {name}! Your appointment request has been sent. A consultant will confirm by email within one business day."
+              aria-labelledby="appt-title">
+          <h2 id="appt-title">Your details</h2>
+          <p class="hint">Fields marked <span class="req">*</span> are required.</p>
+          <input type="hidden" name="_subject" value="New appointment request – WanderLux website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="form" value="Appointment Request">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="form-group">
+              <label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error" required >
+              
+              <span class="error-msg" id="name-error" aria-live="polite"></span>
+            </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error" required >
+              
+              <span class="error-msg" id="email-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-error" required placeholder="04xx xxx xxx">
+              
+              <span class="error-msg" id="phone-error" aria-live="polite"></span>
+            </div>
+          </div>
+            <div class="form-group">
+              <label for="date">Preferred date <span class="req" aria-hidden="true">*</span></label>
+              <input type="date" id="date" name="date" aria-describedby="date-error date-hint" required >
+              <span class="hint" id="date-hint">Monday to Saturday.</span>
+              <span class="error-msg" id="date-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" aria-describedby="message-error message-hint" required></textarea>
+              <span class="hint" id="message-hint">Tell us where you would like to go and when.</span>
+              <span class="error-msg" id="message-error" aria-live="polite"></span>
+            </div>
+          <button class="btn btn--primary" type="submit">Request appointment</button>
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
+
+        <div class="reveal reveal--right">
+          <h2>What to expect</h2>
+          <ul class="info-list">
+            <li><span>We confirm your booking by email within one business day.</span></li>
+            <li><span>Your consultant prepares destination ideas before you arrive.</span></li>
+            <li><span>Bring your calculator estimate and we will refine it together.</span></li>
+            <li><span>Appointments are free with no obligation to book.</span></li>
+          </ul>
+          <div class="testimonial">
+            <blockquote><p>“Our consultant turned a vague idea into the best two weeks we have ever spent in Japan.”</p></blockquote>
+            <cite>Priya &amp; Daniel, Melbourne (sample testimonial)</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>WanderLux Travel Agency</h2>
+        <p>Personalised holidays, guided tours and tailor-made travel packages for domestic and international journeys.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="destinations.html">Destinations &amp; Services</a></li>
+          <li><a href="calculator.html">Trip Cost Calculator</a></li>
+          <li><a href="appointment.html">Book an Appointment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visit us</h3>
+        <address>
+          Level 5, 120 Collins Street<br>Melbourne VIC 3000<br>
+          <a href="tel:+61391234567">(03) 9123 4567</a><br>
+          <a href="mailto:hello@wanderlux.com.au">hello@wanderlux.com.au</a>
+        </address>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> WanderLux Travel Agency. Student project for ICT502 – Internet and Web Development.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+  <script src="main.js" defer></script>
+  <script src="forms.js" defer></script>
+</body>
+</html>

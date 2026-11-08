@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip Cost Calculator | WanderLux Travel Agency</title>
+  <meta name="description" content="Estimate the cost of your next holiday with the WanderLux Trip Cost Calculator. Choose a destination, travellers, trip length and travel style for an instant price.">
+  <meta name="keywords" content="WanderLux, travel agency, holiday packages, guided tours, honeymoon, trip cost calculator, Melbourne">
+  <meta name="author" content="WanderLux Travel Agency">
+  <meta property="og:title" content="Trip Cost Calculator | WanderLux Travel Agency">
+  <meta property="og:description" content="Estimate the cost of your next holiday with the WanderLux Trip Cost Calculator. Choose a destination, travellers, trip length and travel style for an instant price.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1f2a44">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="WanderLux Travel Agency – home">Wander<span>Lux</span></a>
+      <nav aria-label="Main navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span class="visually-hidden">Menu</span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="calculator.html" aria-current="page">Trip Calculator</a></li>
+          <li><a href="appointment.html">Appointments</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-banner">
+      <div class="container">
+        <h1>Trip Cost Calculator</h1>
+        <p>Get an instant estimate for your trip in four quick steps. Prices are in Australian dollars and exclude international flights.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container calc-layout">
+        <form id="calc-form" class="form-card reveal reveal--left" novalidate aria-labelledby="calc-title">
+          <h2 id="calc-title">Your travel preferences</h2>
+            <div class="form-group">
+              <label for="destination">1. Destination <span class="req" aria-hidden="true">*</span></label>
+              <select id="destination" name="destination" aria-describedby="destination-error" required>
+                <option value="">Select a destination…</option>
+                <option value="bali">Bali, Indonesia</option>
+                <option value="paris">Paris, France</option>
+                <option value="tokyo">Tokyo, Japan</option>
+                <option value="santorini">Santorini, Greece</option>
+                <option value="reef">Great Barrier Reef, Australia</option>
+                <option value="queenstown">Queenstown, New Zealand</option>
+              </select>
+              
+              <span class="error-msg" id="destination-error" aria-live="polite"></span>
+            </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="travellers">2. Number of travellers <span class="req" aria-hidden="true">*</span></label>
+              <input type="number" id="travellers" name="travellers" min="1" max="20" step="1" value="2" inputmode="numeric" aria-describedby="travellers-error travellers-hint" required>
+              <span class="hint" id="travellers-hint">Between 1 and 20. Rooms are twin share.</span>
+              <span class="error-msg" id="travellers-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="days">3. Trip length: <output id="days-out" class="range-out" for="days">5 days</output> <span class="req" aria-hidden="true">*</span></label>
+              <input type="range" id="days" name="days" min="1" max="30" value="5" aria-describedby="days-error">
+              
+              <span class="error-msg" id="days-error" aria-live="polite"></span>
+            </div>
+          </div>
+          <fieldset class="radio-group">
+            <legend>4. Travel style <span class="req" aria-hidden="true">*</span></legend>
+            <div class="radio-card"><input type="radio" id="style-budget" name="style" value="budget"><label for="style-budget">Budget<small>×0.7: hostels &amp; 3★</small></label></div>
+            <div class="radio-card"><input type="radio" id="style-standard" name="style" value="standard" checked><label for="style-standard">Standard<small>×1.0: 4★ hotels</small></label></div>
+            <div class="radio-card"><input type="radio" id="style-luxury" name="style" value="luxury"><label for="style-luxury">Luxury<small>×1.8: 5★ &amp; private</small></label></div>
+          </fieldset>
+          <fieldset class="radio-group" style="grid-template-columns:1fr">
+            <legend>Optional extras (per traveller)</legend>
+            <label><input type="checkbox" name="extras" value="transfers"> Airport transfers (+$60)</label>
+            <label><input type="checkbox" name="extras" value="insurance"> Travel insurance (+$45)</label>
+            <label><input type="checkbox" name="extras" value="tours"> Guided day tour (+$120)</label>
+          </fieldset>
+          <button class="btn btn--primary" type="submit">Calculate</button>
+          <button class="btn" type="reset" style="background:var(--sand)">Reset</button>
+        </form>
+
+        <aside id="result-card" class="result-card reveal reveal--right" aria-live="polite" aria-atomic="true">
+          <h2>Your estimate</h2>
+          <p class="placeholder">Fill in your preferences and press <strong>Calculate</strong> to see an estimated cost and breakdown.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--sand" aria-labelledby="rates-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 id="rates-title">How we calculate your estimate</h2>
+          <p>(Daily rate × travellers × days + room rate × rooms × days) × travel style multiplier + optional extras.</p>
+        </div>
+        <div class="table-scroll reveal">
+          <table class="rates-table">
+            <caption class="visually-hidden">Preset rates per destination in AUD</caption>
+            <thead><tr><th scope="col">Destination</th><th scope="col">Daily cost per traveller</th><th scope="col">Room per night (twin share)</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Bali</th><td>$150</td><td>$190</td></tr>
+              <tr><th scope="row">Paris</th><td>$260</td><td>$320</td></tr>
+              <tr><th scope="row">Tokyo</th><td>$230</td><td>$280</td></tr>
+              <tr><th scope="row">Santorini</th><td>$240</td><td>$340</td></tr>
+              <tr><th scope="row">Great Barrier Reef</th><td>$180</td><td>$220</td></tr>
+              <tr><th scope="row">Queenstown</th><td>$200</td><td>$250</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>WanderLux Travel Agency</h2>
+        <p>Personalised holidays, guided tours and tailor-made travel packages for domestic and international journeys.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="destinations.html">Destinations &amp; Services</a></li>
+          <li><a href="calculator.html">Trip Cost Calculator</a></li>
+          <li><a href="appointment.html">Book an Appointment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Visit us</h3>
+        <address>
+          Level 5, 120 Collins Street<br>Melbourne VIC 3000<br>
+          <a href="tel:+61391234567">(03) 9123 4567</a><br>
+          <a href="mailto:hello@wanderlux.com.au">hello@wanderlux.com.au</a>
+        </address>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> WanderLux Travel Agency. Student project for ICT502 – Internet and Web Development.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Back to top">&uarr;</button>
+  <script src="main.js" defer></script>
+  <script src="calculator.js" defer></script>
+</body>
+</html>
